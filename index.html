@@ -6,7 +6,11 @@
         <meta charset="UTF-8"/>
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
-        <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="outerHTML"></div>
+        <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
+        <script
+            type="module"
+            src="https://sitring.eric.si/webring.js?id=nad2040"
+            id="webringjs"></script>
     </head>
     <header>
         <h1>nad2040</h1>
@@ -16,4 +20,8 @@
         <p>Hi. I'm Dan.</p>
         <p>CSS soon™</p>
     </body>
+    <footer>
+        <div id="webring">
+        <p>© 2023 nad2040</p>
+    </footer>
 </html>
