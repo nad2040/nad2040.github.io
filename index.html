@@ -30,8 +30,17 @@
             <template id="webringtemplate">
                 <a href="{{url}}">{{name}}</a>
             </template>
+            <div hx-get="https://jsonplaceholder.typicode.com/todos/1"
+                hx-target="#jsonplaceholder"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+                mustache-template="placeholder"></div>
+            <template id="placeholder">
+                <p>{{title}}</p>
+            </template>
 
             <div id="webringtest">htmx webring test</div>
+            <div id="jsonplaceholder">json placeholder text</div>
         </div>
         <footer>
             <div id="webring"></div>
