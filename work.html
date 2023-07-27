@@ -7,10 +7,10 @@
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
         <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
     </head>
-    <header>
-        <div id="nav"></div>
-    </header>
     <body>
+        <header>
+            <div id="nav"></div>
+        </header>
         <p>
         Working for <a href="https://greenberg.science/">Greenberg</a> on pack/unpack,
         another way to convert semi-structured data to a filesystem. Check out <a href="https://mgree.github.io/ffs/">ffs</a>

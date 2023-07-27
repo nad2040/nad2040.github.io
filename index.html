@@ -6,22 +6,36 @@
         <meta charset="UTF-8"/>
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+        <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
+        <script src="https://unpkg.com/mustache@latest"></script>
         <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
         <script
             type="module"
             src="https://sitring.eric.si/webring.js?id=nad2040"
             id="webringjs"></script>
     </head>
-    <header>
-        <h1>nad2040</h1>
-        <div id="nav"></div>
-    </header>
     <body>
+        <header>
+            <h1>nad2040</h1>
+            <div id="nav"></div>
+        </header>
         <p>Hi. I'm Dan.</p>
         <p>CSS soon™</p>
+        <div hx-ext="client-side-templates">
+            <div hx-get="https://sitring.eric.si/nad2040"
+                hx-target="#webringtest"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+                mustache-template="webringtemplate"></div>
+            <template id="webringtemplate">
+                <a href="{{url}}">{{name}}</a>
+            </template>
+
+            <div id="webringtest">htmx webring test</div>
+        </div>
+        <footer>
+            <div id="webring"></div>
+            <p>© 2023 nad2040</p>
+        </footer>
     </body>
-    <footer>
-        <div id="webring"></div>
-        <p>© 2023 nad2040</p>
-    </footer>
 </html>
