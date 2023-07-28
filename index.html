@@ -9,10 +9,32 @@
         <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
         <script src="https://unpkg.com/mustache@latest"></script>
         <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
-        <script
-            type="module"
-            src="https://sitring.eric.si/webring.js?id=nad2040"
-            id="webringjs"></script>
+        <div hx-ext="client-side-templates">
+            <div hx-get="https://sitring.eric.si/nad2040/neighbors"
+                hx-target="#webring-prev"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+                mustache-template="wr-left"></div>
+            <div hx-get="https://sitring.eric.si/nad2040/neighbors"
+                hx-target="#webring-next"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+                mustache-template="wr-right"></div>
+            <div hx-get="https://sitring.eric.si/nad2040/random"
+                hx-target="#webring-random"
+                hx-trigger="load"
+                hx-swap="innerHTML"
+                mustache-template="wr-random"></div>
+            <template id="wr-left">
+                <a href="{{0.url}}" target="_blank" rel="noopener noreferrer">{{0.name}}</a>
+            </template>
+            <template id="wr-random">
+                <a href="{{url}}" target="_blank" rel="noopener noreferrer">Random</a>
+            </template>
+            <template id="wr-right">
+                <a href="{{1.url}}" target="_blank" rel="noopener noreferrer">{{1.name}}</a>
+            </template>
+        </div>
     </head>
     <body>
         <header>
@@ -21,29 +43,11 @@
         </header>
         <p>Hi. I'm Dan.</p>
         <p>CSS soon™</p>
-        <div hx-ext="client-side-templates">
-            <div hx-get="https://sitring.eric.si/nad2040"
-                hx-target="#webringtest"
-                hx-trigger="load"
-                hx-swap="innerHTML"
-                mustache-template="webringtemplate"></div>
-            <template id="webringtemplate">
-                <a href="{{url}}">{{name}}</a>
-            </template>
-            <div hx-get="https://jsonplaceholder.typicode.com/todos/1"
-                hx-target="#jsonplaceholder"
-                hx-trigger="load"
-                hx-swap="innerHTML"
-                mustache-template="placeholder"></div>
-            <template id="placeholder">
-                <p>{{title}}</p>
-            </template>
-
-            <div id="webringtest">htmx webring test</div>
-            <div id="jsonplaceholder">json placeholder text</div>
-        </div>
         <footer>
-            <div id="webring"></div>
+            <div id="webring">
+                <p id="webring-links"> <== <span id="webring-prev"></span> | <span id="webring-random"></span> | <span id="webring-next"></span> ==> </p>
+                <p id="webring-msg"> This site is part of the <a href="https://github.com/Stevens-26/webring">Stevens Community Webring</a> </p>
+            </div>
             <p>© 2023 nad2040</p>
         </footer>
     </body>
