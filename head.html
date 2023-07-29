@@ -4,5 +4,6 @@
     <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
     <script src="https://unpkg.com/mustache@latest"></script>
     <div hx-get="/header.html" hx-target="#body" hx-trigger="load" hx-swap="afterbegin"></div>
+    <div hx-get="/webring_loader.html" hx-target="this" hx-trigger="load" hx-swap="outerHTML"></div>
     <div hx-get="/footer.html" hx-target="#body" hx-trigger="load" hx-swap="beforeend"></div>
 </head>
