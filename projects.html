@@ -2,15 +2,15 @@
 <html lang="en">
     <head>
         <title>Projects</title>
-        <meta charset="UTF-8"/>
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
-        <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
+        <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
+        <div hx-ext="head-support" hx-get="/head.html" hx-trigger="load"></div>
     </head>
-    <body>
-        <header>
-            <div id="nav"></div>
-        </header>
+    <body id="body">
         <p>Random shit</p>
         <p>Check my <a href="https://github.com/nad2040">github</a> lol.</p>
     </body>

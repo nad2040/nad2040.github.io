@@ -3,52 +3,16 @@
 <html lang="en">
     <head>
         <title>nad2040</title>
-        <meta charset="UTF-8"/>
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <script src="https://unpkg.com/htmx.org@1.9.3"></script>
-        <script src="https://unpkg.com/htmx.org/dist/ext/client-side-templates.js"></script>
-        <script src="https://unpkg.com/mustache@latest"></script>
-        <div hx-get="/nav.html" hx-target="#nav" hx-trigger="load" hx-swap="innerHTML"></div>
-        <div hx-ext="client-side-templates">
-            <div hx-get="https://sitring.eric.si/nad2040/neighbors"
-                hx-target="#webring-prev"
-                hx-trigger="load"
-                hx-swap="innerHTML"
-                mustache-template="wr-left"></div>
-            <div hx-get="https://sitring.eric.si/nad2040/neighbors"
-                hx-target="#webring-next"
-                hx-trigger="load"
-                hx-swap="innerHTML"
-                mustache-template="wr-right"></div>
-            <div hx-get="https://sitring.eric.si/nad2040/random"
-                hx-target="#webring-random"
-                hx-trigger="load"
-                hx-swap="innerHTML"
-                mustache-template="wr-random"></div>
-            <template id="wr-left">
-                <a href="{{0.url}}" target="_blank" rel="noopener noreferrer">{{0.name}}</a>
-            </template>
-            <template id="wr-random">
-                <a href="{{url}}" target="_blank" rel="noopener noreferrer">Random</a>
-            </template>
-            <template id="wr-right">
-                <a href="{{1.url}}" target="_blank" rel="noopener noreferrer">{{1.name}}</a>
-            </template>
-        </div>
+        <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
+        <div hx-ext="head-support" hx-get="/head.html" hx-trigger="load"></div>
     </head>
-    <body>
-        <header>
-            <h1>nad2040</h1>
-            <div id="nav"></div>
-        </header>
+    <body id="body">
         <p>Hi. I'm Dan.</p>
         <p>CSS soon™</p>
-        <footer>
-            <div id="webring">
-                <p id="webring-links"> <== <span id="webring-prev"></span> | <span id="webring-random"></span> | <span id="webring-next"></span> ==> </p>
-                <p id="webring-msg"> This site is part of the <a href="https://github.com/Stevens-26/webring" target="_blank" rel="noopener noreferrer">Stevens Community Webring</a> </p>
-            </div>
-            <p>© 2023 nad2040</p>
-        </footer>
     </body>
 </html>
