@@ -5,13 +5,17 @@
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css"/>
 
-        <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+        <script src="https://unpkg.com/htmx.org@1.9.4"></script>
         <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
         <div hx-ext="head-support" hx-get="/head.html" hx-trigger="load"></div>
     </head>
     <body id="body">
-        <p>Random shit</p>
-        <p>Check my <a href="https://github.com/nad2040">github</a> lol.</p>
+        <div class="content">
+            <p>Random shit</p>
+            <p>Check my <a class="mylink" href="https://github.com/nad2040">github</a> lol.</p>
+        </div>
     </body>
 </html>

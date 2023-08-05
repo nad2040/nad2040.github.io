@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 :root {
   font-family: 'Fira Code', monospace;
+  background-color: #222222;
+  color: #ffffff;
 }
 div {
     display: block;
 }
-
-.pure-menu-heading {
-    text-transform: none;
-    font-size:1.5em;
+a {
+    text-decoration: none;
 }
+
 .home-menu {
     padding: 2em;
     float: left;
@@ -19,14 +19,43 @@ div {
     display: flex;
     flex-wrap: wrap;
     white-space: normal;
+    margin: auto;
 }
+.pure-menu-heading {
+    text-transform: none;
+    font-size:1.5em;
+}
+.pure-menu-list {
+    margin: auto;
+}
+.pure-menu-link {
+    color: #ffffff;
+}
+.pure-menu-link:hover {
+    background-color: #333333;
+}
+
+.mylink {
+    color: lightblue;
+}
+
 body {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
 }
 
-
 footer {
+    margin: auto;
+    text-align: center;
     font-size: 0.8rem;
+}
+
+
+.content {
+    margin: 2em;
+}
+
+#copyright {
+    margin: auto;
 }

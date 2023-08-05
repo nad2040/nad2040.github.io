@@ -5,15 +5,19 @@
         <link rel="icon" href="/cursor.gif" type="image/gif"/>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+        <link rel="stylesheet" href="/style.css"/>
 
-        <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+        <script src="https://unpkg.com/htmx.org@1.9.4"></script>
         <script src="https://unpkg.com/htmx.org/dist/ext/head-support.js"></script>
         <div hx-ext="head-support" hx-get="/head.html" hx-trigger="load"></div>
     </head>
     <body id="body">
-        <p>
-        Working for <a href="https://greenberg.science/">Greenberg</a> on pack/unpack,
-        another way to convert semi-structured data to a filesystem. Check out <a href="https://mgree.github.io/ffs/">ffs</a>
-        </p>
+        <div class="content">
+            <p>
+            Working for <a class="mylink" href="https://greenberg.science/">Greenberg</a> on pack/unpack,
+            another way to convert semi-structured data to a filesystem. Check out <a class="mylink" href="https://mgree.github.io/ffs/">ffs</a>
+            </p>
+        </div>
     </body>
 </html>
