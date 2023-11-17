@@ -1,11 +1,12 @@
+<div hx-get="/home.html" hx-target=".content" hx-trigger="load" hx-swap="outerHTML"></div>
 <header>
     <div class="home-menu pure-menu pure-menu-horizontal">
-        <a class="pure-menu-heading pure-menu-link" href="/">nad2040</a>
+        <a class="pure-menu-heading pure-menu-link" hx-get="/home.html" hx-target=".content" hx-trigger="click" hx-swap="outerHTML">nad2040</a>
         <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a class="pure-menu-link" href="/">Home</a>
-            <li class="pure-menu-item"><a class="pure-menu-link" href="/projects.html">Projects</a>
-            <li class="pure-menu-item"><a class="pure-menu-link" href="/work.html">Work</a>
-            <li class="pure-menu-item"><a class="pure-menu-link" href="/about.html">About Me</a>
+            <li class="pure-menu-item"><a class="pure-menu-link" hx-get="/home.html"     hx-target=".content" hx-trigger="click" hx-swap="outerHTML">Home</a>
+            <li class="pure-menu-item"><a class="pure-menu-link" hx-get="/projects.html" hx-target=".content" hx-trigger="click" hx-swap="outerHTML">Projects</a>
+            <li class="pure-menu-item"><a class="pure-menu-link" hx-get="/work.html"     hx-target=".content" hx-trigger="click" hx-swap="outerHTML">Work</a>
+            <li class="pure-menu-item"><a class="pure-menu-link" hx-get="/about.html"    hx-target=".content" hx-trigger="click" hx-swap="outerHTML">About Me</a>
         </ul>
     </div>
 </header>
