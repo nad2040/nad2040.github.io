@@ -4,7 +4,10 @@
         <p id="webring-msg"> This site is part of the <a class="mylink" href="https://github.com/Stevens-26/webring" target="_blank" rel="noopener noreferrer">Stevens Community Webring</a> </p>
     </div>
     <div id="copyright">
-        <p>© 2023 nad2040</p>
+        <p>© <span id="year"></span> nad2040</p>
     </div>
+    <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
     <div><p>All opinions are my own. No exceptions.</p></div>
 </footer>
